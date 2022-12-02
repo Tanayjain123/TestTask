@@ -15,11 +15,19 @@
         <%= f.label :task %><br>
         <%= f.text_field :task %>
     </p>
-    <div >
+    <div>
         <%= f.label :assign_to %>
         <%= f.collection_select :assigned_to_id, @user , :id, :first_name %>
     </div>
-    <div >
+    <div>
+        <b>Role</b><br/>
+        <%= f.radio_button :status, 'pending' %> pending
+        <%= f.radio_button :status, 'inprogress' %> inprogress
+        <%= f.radio_button :status, 'out_for_test' %> out_for_test
+        <%= f.radio_button :status, 'On_production' %> On_production
+        <%= f.radio_button :status, 'completed' %> completed
+    </div>
+    <div>
         <%= f.label :assign_by %>
         <%= f.collection_select :assigned_by_id, @user , :id, :first_name %>
     </div>
