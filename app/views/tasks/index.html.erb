@@ -14,6 +14,7 @@
             <td><%=task.assigned_to.first_name%></td>
             <td><%=task.created_at.strftime("%d/%m/%y")%></td>
             <td><%= link_to "Edit Task", edit_project_task_path(project_id: task.project.id,id: task.id) %></td>
+            <td><%= link_to 'create comments', new_task_comment_path(task_id: task.id), method: :get%></td>
         </tr>
     <%end%>
 </table>

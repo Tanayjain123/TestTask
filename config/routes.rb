@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   resources :projects do
     resources :tasks
   end
+
+  resources :tasks do
+    resources :comments
+  end
 end
